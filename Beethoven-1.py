@@ -46,6 +46,7 @@ def process_midi_message(message):
 		if Akt_Num == 1:          # ===============================================   001
 			print("AktionsNr =",Akt_Num)
 			Bef_Key[62] = True
+			print("AktNr =",Akt_Num, ' passed',end='')
 			Akt_Num = 2
 			print(", New AktNr =",Akt_Num)
 			pass
@@ -59,6 +60,7 @@ def process_midi_message(message):
 				#SENDING OSC MESSAGES
 				client.send_message(msg, mn) 
 				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 3
 				print(", New AktNr =",Akt_Num)
 			pass
@@ -72,6 +74,7 @@ def process_midi_message(message):
 				#SENDING OSC MESSAGES
 				client.send_message(msg, mn) 
 				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 4
 				print(", New AktNr =",Akt_Num)
 			pass
@@ -85,6 +88,7 @@ def process_midi_message(message):
 				#SENDING OSC MESSAGES
 				client.send_message(msg, mn) 
 				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 5
 				print(", New AktNr =",Akt_Num)
 			pass
@@ -99,6 +103,7 @@ def process_midi_message(message):
 				#SENDING OSC MESSAGES
 				client.send_message(msg, mn) 
 				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 6
 				print(", New AktNr =",Akt_Num)
 			pass
@@ -106,6 +111,7 @@ def process_midi_message(message):
 			print("AktionsNr =",Akt_Num)
 			if message.note == 51:
 				Bef_Key[51]=False
+				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 7
 				print(", New AktNr =",Akt_Num)
 			pass
@@ -119,6 +125,7 @@ def process_midi_message(message):
 				#SENDING OSC MESSAGES
 				client.send_message(msg, mn) 
 				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 8
 				print(", New AktNr =",Akt_Num)
 			pass
@@ -127,6 +134,7 @@ def process_midi_message(message):
 			if message.note == 90:
 				Bef_Key[90]=False
 				Bef_Key[88]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 9
 				print(", New AktNr =",Akt_Num)
 			pass
@@ -679,7 +687,7 @@ while BReRun and (not BExit):
 			if message:
 				process_midi_message(message)
 				if message.type == 'note_on' or message.type == 'note_off':
-					print("message=", message)
+					#print("message=", message)
 					track.append(mido.Message('note_on', note = message.note, velocity=64, time=32))
 					track.append(mido.Message('note_off', note = message.note, velocity=64, time=64))
 			#else:

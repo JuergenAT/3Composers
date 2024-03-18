@@ -380,157 +380,613 @@ def process_midi_message(message):
 				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 147:       # ===============================================   147
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 30:
+				Bef_Key[30]=False
+				Bef_Key[54]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 148
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 148:       # ===============================================   148
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 54:
+				Bef_Key[54]=False
+				Bef_Key[47]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 149
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 149:       # ===============================================   149
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 47:
+				Bef_Key[47]=False
+				Bef_Key[79]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 150
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 150:       # ===============================================   150
-			
+			print("AktionsNr =",Akt_Num)
+			if message.note == 79:
+				Bef_Key[79]=False
+				Bef_Key[38]=True
+				mn = 75
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 151
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 151:       # ===============================================   151
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 38:
+				Bef_Key[38]=False
+				Bef_Key[81]=True
+				mn = 76
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 15101
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 15101:       # ===============================================   15101
+			print("AktionsNr =",Akt_Num)
+			if message.note == 81:
+				Bef_Key[81]=False
+				Bef_Key[31]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 15102
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 15102:       # ===============================================   15102
+			print("AktionsNr =",Akt_Num)
+			if message.note == 31:
+				Bef_Key[31]=False
+				Bef_Key[81]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 15103
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 15103:       # ===============================================   15103
+			print("AktionsNr =",Akt_Num)
+			if message.note == 81:
+				Bef_Key[81]=False
+				Bef_Key[90]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 152
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 152:       # ===============================================   152
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 90:
+				Bef_Key[90]=False
+				Bef_Key[81]=True
+				mn = 77
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 153
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 153:       # ===============================================   153
-			
+			print("AktionsNr =",Akt_Num)
+			if message.note == 81:
+				Bef_Key[81]=False
+				Bef_Key[88]=True
+				mn = 78
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 154
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 154:       # ===============================================   154
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 88:
+				Bef_Key[88]=False
+				Bef_Key[81]=True
+				mn = 79
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 155
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 155:       # ===============================================   155
-			
+			print("AktionsNr =",Akt_Num)
+			if message.note == 81:
+				Bef_Key[81]=False
+				Bef_Key[88]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 156
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 156:       # ===============================================   156
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 88:
+				Bef_Key[88]=False
+				Bef_Key[83]=True
+				mn = 80
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 157
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 157:       # ===============================================   157
-			
+			print("AktionsNr =",Akt_Num)
+			if message.note == 83:
+				Bef_Key[83]=False
+				Bef_Key[88]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 158
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 158:       # ===============================================   158
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 88:
+				Bef_Key[88]=False
+				Bef_Key[33]=True
+				mn = 81
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 159
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 159:       # ===============================================   159
-			
+			print("AktionsNr =",Akt_Num)
+			if message.note == 33:
+				Bef_Key[33]=False
+				Bef_Key[47]=True
+				mn = 82
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 160
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 160:       # ===============================================   160
-			
+			print("AktionsNr =",Akt_Num)
+			if message.note == 47:
+				Bef_Key[47]=False
+				Bef_Key[38]=True
+				mn = 83
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 161
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 161:       # ===============================================   161
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 38:
+				Bef_Key[38]=False
+				Bef_Key[42]=True
+				mn = 84
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 162
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 162:       # ===============================================   162
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 42:
+				Bef_Key[42]=False
+				Bef_Key[40]=True
+				mn = 85
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 163
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 163:       # ===============================================   163
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 40:
+				Bef_Key[40]=False
+				Bef_Key[48]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 164
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 164:       # ===============================================   164
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 48:
+				Bef_Key[48]=False
+				Bef_Key[81]=True
+				mn = 86
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 165
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 165:       # ===============================================   165
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 81:
+				Bef_Key[81]=False
+				Bef_Key[54]=True
+				mn = 87
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 166
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 166:       # ===============================================   166
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 54:
+				Bef_Key[54]=False
+				Bef_Key[78]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 167
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 167:       # ===============================================   167
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 78:
+				Bef_Key[78]=False
+				Bef_Key[57]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 168
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 168:       # ===============================================   168
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 57:
+				Bef_Key[57]=False
+				Bef_Key[55]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 169
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 169:       # ===============================================   169
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 55:
+				Bef_Key[55]=False
+				Bef_Key[66]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 170
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 170:       # ===============================================   170
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 66:
+				Bef_Key[66]=False
+				Bef_Key[67]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 171
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 171:       # ===============================================   171
-			
+			print("AktionsNr =",Akt_Num)
+			if message.note == 67:
+				Bef_Key[67]=False
+				Bef_Key[47]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 172
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 172:       # ===============================================   172
-			
+			print("AktionsNr =",Akt_Num)
+			if message.note == 47:
+				Bef_Key[47]=False
+				Bef_Key[71]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 173
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 173:       # ===============================================   173
-			
+			print("AktionsNr =",Akt_Num)
+			if message.note == 71:
+				Bef_Key[71]=False
+				Bef_Key[88]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 174
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 174:       # ===============================================   174
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 88:
+				Bef_Key[88]=False
+				Bef_Key[84]=True
+				mn = 88
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 175
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 175:       # ===============================================   175
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 84:
+				Bef_Key[84]=False
+				Bef_Key[76]=True
+				mn = 89
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 176
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 176:       # ===============================================   176
-			
+			print("AktionsNr =",Akt_Num)
+			if message.note == 76:
+				Bef_Key[76]=False
+				Bef_Key[48]=True
+				Bef_Key[88]=True
+				mn = 90
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 177
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 177:       # ===============================================   177
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 48:
+				mn = 91
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 178
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 178:       # ===============================================   178
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 88:
+				Bef_Key[88]=False
+				Bef_Key[48]=False
+				Bef_Key[30]=True
+				mn = 92
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 179
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 179:       # ===============================================   179
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 30:
+				Bef_Key[30]=False
+				Bef_Key[34]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 180
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 180:       # ===============================================   180
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 34:
+				Bef_Key[34]=False
+				Bef_Key[33]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 181
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 181:       # ===============================================   181
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 33:
+				Bef_Key[33]=False
+				Bef_Key[31]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 182
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 182:       # ===============================================   182
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 31:
+				Bef_Key[31]=False
+				Bef_Key[88]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 183
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 183:       # ===============================================   183
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 88:
+				Bef_Key[88]=False
+				Bef_Key[64]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 18301
+				print(", New AktNr =",Akt_Num)
 			pass
+		elif Akt_Num == 18301:       # ===============================================   18301
+			print("AktionsNr =",Akt_Num)
+			if message.note == 64:
+				Bef_Key[64]=False
+				Bef_Key[71]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 184
+				print(", New AktNr =",Akt_Num)
+			pass	
 		elif Akt_Num == 184:       # ===============================================   184
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 71:
+				Bef_Key[71]=False
+				Bef_Key[35]=True
+				mn = 93
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 185
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 185:       # ===============================================   185
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 35:
+				Bef_Key[35]=False
+				Bef_Key[84]=True
+				mn = 94
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 186
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 186:       # ===============================================   186
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 84:
+				Bef_Key[84]=False
+				Bef_Key[35]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 187
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 187:       # ===============================================   187
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 35:
+				Bef_Key[35]=False
+				Bef_Key[88]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 188
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 188:       # ===============================================   188
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 88:
+				Bef_Key[88]=False
+				Bef_Key[32]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 189
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 189:       # ===============================================   189
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 32:
+				Bef_Key[32]=False
+				Bef_Key[88]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 190
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 190:       # ===============================================   190
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 88:
+				Bef_Key[88]=False
+				Bef_Key[30]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 191
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 191:       # ===============================================   191
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 30:
+				Bef_Key[30]=False
+				Bef_Key[88]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 192
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 192:       # ===============================================   192
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 88:
+				Bef_Key[88]=False
+				Bef_Key[30]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 193
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 193:       # ===============================================   193
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 30:
+				Bef_Key[30]=False
+				Bef_Key[76]=True
+				mn = 95
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 194
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 194:       # ===============================================   194
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 76:
+				Bef_Key[76]=False
+				Bef_Key[93]=True
+				mn = 96
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 195
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 195:       # ===============================================   195
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 93:
+				Bef_Key[93]=False
+				Bef_Key[30]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 196
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 196:       # ===============================================   196
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 30:
+				Bef_Key[30]=False
+				Bef_Key[93]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 197
+				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 197:       # ===============================================   197
-		
+			print("AktionsNr =",Akt_Num)
+			if message.note == 93:
+				Bef_Key[93]=False
+				Bef_Key[45]=True
+				mn = 97
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				BExit = True
 			pass
 		
 	#elif message.type == 'note_off' and message.channel == TARGET_INSTRUMENT:
