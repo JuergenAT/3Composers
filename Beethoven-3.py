@@ -42,7 +42,7 @@ print("55555555555555")
 def process_midi_message(message):
 	global mn, Akt_Num, Bef_Key, BExit
 	if message.type == 'note_on':
-		print(f"MIDI Note On: {message.note}")
+		print(f">>>>>>>>>>>>>>>>>>>>>>>>>>MIDI Note On: {message.note}")
 		if Akt_Num == 123:          # ===============================================   123
 			print("AktionsNr =",Akt_Num)
 			if message.note == 81:
