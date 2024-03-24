@@ -43,254 +43,745 @@ def process_midi_message(message):
 	global mn, Akt_Num, Bef_Key, BExit
 	if message.type == 'note_on':
 		print(f">>>>>>>>>>>>>>>>>>>>>>>>>>MIDI Note On: {message.note}")
-		if Akt_Num == 123:          # ===============================================   123
+		if Akt_Num == 198:          # ===============================================   198
 			print("AktionsNr =",Akt_Num)
-			if message.note == 81:
-				Bef_Key[81]=False
-				Bef_Key[50]=True
-				mn = 51
+			if message.note == 45:
+				Bef_Key[45]=False
+				Bef_Key[38]=True
+				mn = 99
 				msg = "/action/launchColumn"
 				#SENDING OSC MESSAGES
 				client.send_message(msg, mn) 
 				print("msg=",msg,"n=",mn)
 				print("AktNr =",Akt_Num, ' passed',end='')
-				Akt_Num = 124
+				Akt_Num = 199
 				print(", New AktNr =",Akt_Num)
 			pass
-		elif Akt_Num == 124:        # ===============================================   124
-			
+		elif Akt_Num == 199:        # ===============================================   199
+			print("AktionsNr =",Akt_Num)
+			if message.note == 38:
+				Bef_Key[38]=False
+				Bef_Key[45]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 200
+				print(", New AktNr =",Akt_Num)
 			pass
-		elif Akt_Num == 125:        # ===============================================   125
-			
+		elif Akt_Num == 200:        # ===============================================   200
+			print("AktionsNr =",Akt_Num)
+			if message.note == 45:
+				Bef_Key[45]=False
+				Bef_Key[38]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 201
+				print(", New AktNr =",Akt_Num)
 			pass
-		elif Akt_Num == 126:        # ===============================================   126
+		elif Akt_Num == 201:        # ===============================================   201
+			print("AktionsNr =",Akt_Num)
+			if message.note == 38:
+				Bef_Key[38]=False
+				Bef_Key[45]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 202
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 202:        # ===============================================   202
+			print("AktionsNr =",Akt_Num)
+			if message.note == 45:
+				Bef_Key[45]=False
+				Bef_Key[38]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 203
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 203:        # ===============================================   203
+			print("AktionsNr =",Akt_Num)
+			if message.note == 38:
+				Bef_Key[38]=False
+				Bef_Key[45]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 204
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 204:        # ===============================================   204
+			print("AktionsNr =",Akt_Num)
+			if message.note == 45:
+				Bef_Key[45]=False
+				Bef_Key[38]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 205
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 205:        # ===============================================   205
+			print("AktionsNr =",Akt_Num)
+			if message.note == 38:
+				Bef_Key[38]=False
+				Bef_Key[76]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 206
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 206:        # ===============================================   206
+			print("AktionsNr =",Akt_Num)
+			if message.note == 76:
+				Bef_Key[76]=False
+				Bef_Key[81]=True
+				mn = 100
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 207
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 207:       # ===============================================   207
+			print("AktionsNr =",Akt_Num)
+			if message.note == 81:
+				Bef_Key[81]=False
+				Bef_Key[76]=True
+				mn = 101
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 208
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 208:       # ===============================================   208
+			print("AktionsNr =",Akt_Num)
+			if message.note == 76:
+				Bef_Key[76]=False
+				Bef_Key[69]=True
+				mn = 102
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 209
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 209:       # ===============================================   209
+			print("AktionsNr =",Akt_Num)
+			if message.note == 69:
+				Bef_Key[69]=False
+				Bef_Key[79]=True
+				mn = 103
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 210
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 210:       # ===============================================   210
+			print("AktionsNr =",Akt_Num)
+			if message.note == 79:
+				Bef_Key[79]=False
+				Bef_Key[60]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 211
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 211:       # ===============================================   211
+			print("AktionsNr =",Akt_Num)
+			if message.note == 60:
+				#Bef_Key[60]=False
+				Bef_Key[71]=True
+				mn = 104
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 21101
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 21101:       # ===============================================   21101
+			print("AktionsNr =",Akt_Num)
+			if message.note == 60:
+				#Bef_Key[60]=False
+				#Bef_Key[71]=True
+				mn = 105
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 21102
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 21102:       # ===============================================   21102
+			print("AktionsNr =",Akt_Num)
+			if message.note == 60:
+				#Bef_Key[60]=False
+				#Bef_Key[71]=True
+				mn = 106
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 21103
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 21103:       # ===============================================   21103
+			print("AktionsNr =",Akt_Num)
+			if message.note == 60:
+				#Bef_Key[60]=False
+				#Bef_Key[71]=True
+				mn = 107
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 21104
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 21104:       # ===============================================   21104
+			print("AktionsNr =",Akt_Num)
+			if message.note == 60:
+				#Bef_Key[60]=False
+				#Bef_Key[71]=True
+				mn = 108
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 21105
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 21105:       # ===============================================   21105
+			print("AktionsNr =",Akt_Num)
+			if message.note == 60:
+				#Bef_Key[60]=False
+				#Bef_Key[71]=True
+				mn = 109
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 21106
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 21106:       # ===============================================   21106
+			print("AktionsNr =",Akt_Num)
+			if message.note == 60:
+				#Bef_Key[60]=False
+				#Bef_Key[71]=True
+				mn = 110
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 21107
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 21107:       # ===============================================   21107
+			print("AktionsNr =",Akt_Num)
+			if message.note == 60:
+				#Bef_Key[60]=False
+				#Bef_Key[71]=True
+				mn = 111
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 21108
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 21108:       # ===============================================   21108
+			print("AktionsNr =",Akt_Num)
+			if message.note == 60:
+				#Bef_Key[60]=False
+				#Bef_Key[71]=True
+				mn = 112
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 212
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 212:       # ===============================================   212
+			print("AktionsNr =",Akt_Num)
+			if message.note == 71:
+				Bef_Key[71]=False
+				Bef_Key[60]=False
+				Bef_Key[73]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 213
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 213:       # ===============================================   213
+			print("AktionsNr =",Akt_Num)
+			if message.note == 73:
+				Bef_Key[73]=False
+				Bef_Key[90]=True
+				mn = 113
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 214
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 214:       # ===============================================   214
+			print("AktionsNr =",Akt_Num)
+			if message.note == 90:
+				Bef_Key[90]=False
+				Bef_Key[79]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 215
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 215:       # ===============================================   215
+			print("AktionsNr =",Akt_Num)
+			if message.note == 79:
+				Bef_Key[79]=False
+				Bef_Key[55]=True
+				mn = 114
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 216
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 216:       # ===============================================   216
+			print("AktionsNr =",Akt_Num)
+			if message.note == 55:
+				Bef_Key[55]=False
+				Bef_Key[52]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 217
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 217:       # ===============================================   217
+			print("AktionsNr =",Akt_Num)
+			if message.note == 52:
+				Bef_Key[52]=False
+				Bef_Key[31]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 218
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 218:       # ===============================================   218
+			print("AktionsNr =",Akt_Num)
+			if message.note == 31:
+				Bef_Key[31]=False
+				Bef_Key[52]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 219
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 219:       # ===============================================   219
+			print("AktionsNr =",Akt_Num)
+			if message.note == 52:
+				Bef_Key[52]=False
+				Bef_Key[31]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 220
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 220:       # ===============================================   220
+			print("AktionsNr =",Akt_Num)
+			if message.note == 31:
+				Bef_Key[31]=False
+				Bef_Key[55]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 221
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 221:       # ===============================================   221
+			print("AktionsNr =",Akt_Num)
+			if message.note == 55:
+				Bef_Key[55]=False
+				Bef_Key[36]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 222
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 222:       # ===============================================   222
+			print("AktionsNr =",Akt_Num)
+			if message.note == 36:
+				Bef_Key[36]=False
+				Bef_Key[81]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 223
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 223:       # ===============================================   223
+			print("AktionsNr =",Akt_Num)
+			if message.note == 81:
+				Bef_Key[81]=False
+				Bef_Key[40]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 224
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 224:       # ===============================================   224
+			print("AktionsNr =",Akt_Num)
+			if message.note == 40:
+				Bef_Key[40]=False
+				Bef_Key[81]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 225
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 225:       # ===============================================   225
+			print("AktionsNr =",Akt_Num)
+			if message.note == 81:
+				Bef_Key[81]=False
+				Bef_Key[37]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 226
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 226:       # ===============================================   226
+			print("AktionsNr =",Akt_Num)
+			if message.note == 37:
+				Bef_Key[37]=False
+				Bef_Key[46]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 227
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 227:       # ===============================================   227
+			print("AktionsNr =",Akt_Num)
+			if message.note == 46:
+				Bef_Key[46]=False
+				Bef_Key[28]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 228
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 228:       # ===============================================   228
+			print("AktionsNr =",Akt_Num)
+			if message.note == 28:
+				Bef_Key[28]=False
+				Bef_Key[71]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 229
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 229:       # ===============================================   229
+			print("AktionsNr =",Akt_Num)
+			if message.note == 71:
+				Bef_Key[71]=False
+				Bef_Key[81]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 230
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 230:       # ===============================================   230
+			print("AktionsNr =",Akt_Num)
+			if message.note == 81:
+				Bef_Key[81]=False
+				Bef_Key[31]=True
+				mn = 115
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 231
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 231:       # ===============================================   231
+			print("AktionsNr =",Akt_Num)
+			if message.note == 31:
+				Bef_Key[31]=False
+				Bef_Key[68]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 232
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 232:       # ===============================================   232
+			print("AktionsNr =",Akt_Num)
+			if message.note == 68:
+				Bef_Key[68]=False
+				Bef_Key[91]=True
+				mn = 116
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 233
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 233:       # ===============================================   233
+			print("AktionsNr =",Akt_Num)
+			if message.note == 91:
+				Bef_Key[91]=False
+				Bef_Key[39]=True
+				mn = 117
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 234
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 234:       # ===============================================   234
+			print("AktionsNr =",Akt_Num)
+			if message.note == 39:
+				Bef_Key[39]=False
+				Bef_Key[67]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 235
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 235:       # ===============================================   235
+			print("AktionsNr =",Akt_Num)
+			if message.note == 67:
+				Bef_Key[67]=False
+				Bef_Key[28]=True
+				mn = 118
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 236
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 236:       # ===============================================   236
+			print("AktionsNr =",Akt_Num)
+			if message.note == 28:
+				Bef_Key[28]=False
+				Bef_Key[79]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 237
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 237:       # ===============================================   237
+			print("AktionsNr =",Akt_Num)
+			if message.note == 79:
+				Bef_Key[79]=False
+				Bef_Key[80]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 238
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 238:       # ===============================================   238
+			print("AktionsNr =",Akt_Num)
+			if message.note == 80:
+				Bef_Key[80]=False
+				Bef_Key[88]=True
+				mn = 119
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 239
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 239:       # ===============================================   239
+			print("AktionsNr =",Akt_Num)
+			if message.note == 88:
+				Bef_Key[88]=False
+				Bef_Key[24]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 240
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 240:       # ===============================================   240
+			print("AktionsNr =",Akt_Num)
+			if message.note == 24:
+				Bef_Key[24]=False
+				Bef_Key[31]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 241
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 241:       # ===============================================   241
+			print("AktionsNr =",Akt_Num)
+			if message.note == 31:
+				Bef_Key[31]=False
+				Bef_Key[24]=True
+				mn = 120
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 242
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 242:       # ===============================================   242
+			print("AktionsNr =",Akt_Num)
+			if message.note == 24:
+				Bef_Key[24]=False
+				Bef_Key[87]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 243
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 243:       # ===============================================   243
+			print("AktionsNr =",Akt_Num)
+			if message.note == 87:
+				Bef_Key[87]=False
+				Bef_Key[30]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 244
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 244:       # ===============================================   244
+			print("AktionsNr =",Akt_Num)
+			if message.note == 30:
+				Bef_Key[30]=False
+				Bef_Key[86]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 245
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 245:       # ===============================================   245
+			print("AktionsNr =",Akt_Num)
+			if message.note == 86:
+				Bef_Key[86]=False
+				Bef_Key[82]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 246
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 246:       # ===============================================   246
+			print("AktionsNr =",Akt_Num)
+			if message.note == 82:
+				Bef_Key[82]=False
+				Bef_Key[39]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 247
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 247:       # ===============================================   247
+			print("AktionsNr =",Akt_Num)
+			if message.note == 39:
+				Bef_Key[39]=False
+				Bef_Key[53]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 248
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 248:       # ===============================================   248
+			print("AktionsNr =",Akt_Num)
+			if message.note == 53:
+				Bef_Key[53]=False
+				Bef_Key[60]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 249
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 249:       # ===============================================   249
+			print("AktionsNr =",Akt_Num)
+			if message.note == 60:
+				Bef_Key[60]=False
+				Bef_Key[30]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 250
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 250:       # ===============================================   250
+			print("AktionsNr =",Akt_Num)
+			if message.note == 30:
+				Bef_Key[30]=False
+				Bef_Key[90]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 251
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 251:       # ===============================================   251
+			print("AktionsNr =",Akt_Num)
+			if message.note == 90:
+				Bef_Key[90]=False
+				Bef_Key[26]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 252
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 252:       # ===============================================   252
+			print("AktionsNr =",Akt_Num)
+			if message.note == 26:
+				Bef_Key[26]=False
+				Bef_Key[86]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 253
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 253:       # ===============================================   253
+			print("AktionsNr =",Akt_Num)
+			if message.note == 86:
+				Bef_Key[86]=False
+				Bef_Key[32]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 254
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 254:       # ===============================================   254
+			print("AktionsNr =",Akt_Num)
+			if message.note == 32:
+				#Bef_Key[86]=False
+				#Bef_Key[32]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 255
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 255:       # ===============================================   255
+			print("AktionsNr =",Akt_Num)
+			if message.note == 32:
+				Bef_Key[32]=False
+				Bef_Key[83]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 256
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 256:       # ===============================================   256
+			print("AktionsNr =",Akt_Num)
+			if message.note == 83:
+				Bef_Key[83]=False
+				Bef_Key[69]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 257
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 257:       # ===============================================   257
+			print("AktionsNr =",Akt_Num)
+			if message.note == 69:
+				Bef_Key[69]=False
+				Bef_Key[71]=True
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 258
+				print(", New AktNr =",Akt_Num)
+			pass
+		elif Akt_Num == 258:       # ===============================================   258
+			print("AktionsNr =",Akt_Num)
+			if message.note == 71:
+				Bef_Key[71]=False
+				Bef_Key[96]=True
+				mn = 121
+				msg = "/action/launchColumn"
+				#SENDING OSC MESSAGES
+				client.send_message(msg, mn) 
+				print("msg=",msg,"n=",mn)
+				print("AktNr =",Akt_Num, ' passed',end='')
+				Akt_Num = 258
+				print(", New AktNr =",Akt_Num)
+				BExit = True
+			pass
 		
-			pass
-		elif Akt_Num == 127:        # ===============================================   127
-			
-			pass
-		elif Akt_Num == 128:        # ===============================================   128
-		
-			pass
-		elif Akt_Num == 129:        # ===============================================   129
-			
-			pass
-		elif Akt_Num == 130:        # ===============================================   130
-		
-			pass
-		elif Akt_Num == 131:        # ===============================================   131
-			
-			pass
-		elif Akt_Num == 132:       # ===============================================   132
-		
-			pass
-		elif Akt_Num == 133:       # ===============================================   133
-			
-			pass
-		elif Akt_Num == 134:       # ===============================================   134
-		
-			pass
-		elif Akt_Num == 135:       # ===============================================   135
-		
-			pass
-		elif Akt_Num == 136:       # ===============================================   136
-			
-			pass
-		elif Akt_Num == 137:       # ===============================================   137
-		
-			pass
-		elif Akt_Num == 138:       # ===============================================   138
-			
-			pass
-		elif Akt_Num == 139:       # ===============================================   139
-			
-			pass
-		elif Akt_Num == 140:       # ===============================================   140
-		
-			pass
-		elif Akt_Num == 141:       # ===============================================   141
-		
-			pass
-		elif Akt_Num == 142:       # ===============================================   142
-			
-			pass
-		elif Akt_Num == 143:       # ===============================================   143
-		
-			pass
-		elif Akt_Num == 144:       # ===============================================   144
-		
-			pass
-		elif Akt_Num == 145:       # ===============================================   145
-		
-			pass
-		elif Akt_Num == 146:       # ===============================================   146
-			
-			pass
-		elif Akt_Num == 147:       # ===============================================   147
-		
-			pass
-		elif Akt_Num == 148:       # ===============================================   148
-		
-			pass
-		elif Akt_Num == 149:       # ===============================================   149
-			
-			pass
-		elif Akt_Num == 150:       # ===============================================   150
-			
-			pass
-		elif Akt_Num == 151:       # ===============================================   151
-			
-			pass
-		elif Akt_Num == 15101:       # ===============================================   15101
-		
-			pass
-		elif Akt_Num == 15102:       # ===============================================   15102
-		
-			pass
-		elif Akt_Num == 15103:       # ===============================================   15103
-		
-			pass
-		elif Akt_Num == 152:       # ===============================================   152
-		
-			pass
-		elif Akt_Num == 153:       # ===============================================   153
-			
-			pass
-		elif Akt_Num == 154:       # ===============================================   154
-		
-			pass
-		elif Akt_Num == 155:       # ===============================================   155
-			
-			pass
-		elif Akt_Num == 156:       # ===============================================   156
-		
-			pass
-		elif Akt_Num == 157:       # ===============================================   157
-			
-			pass
-		elif Akt_Num == 158:       # ===============================================   158
-		
-			pass
-		elif Akt_Num == 159:       # ===============================================   159
-			
-			pass
-		elif Akt_Num == 160:       # ===============================================   160
-		
-			pass
-		elif Akt_Num == 161:       # ===============================================   161
-			
-			pass
-		elif Akt_Num == 162:       # ===============================================   162
-		
-			pass
-		elif Akt_Num == 163:       # ===============================================   163
-		
-			pass
-		elif Akt_Num == 164:       # ===============================================   164
-		
-			pass
-		elif Akt_Num == 165:       # ===============================================   165
-		
-			pass
-		elif Akt_Num == 166:       # ===============================================   166
-		
-			pass
-		elif Akt_Num == 167:       # ===============================================   167
-			
-			pass
-		elif Akt_Num == 168:       # ===============================================   168
-		
-			pass
-		elif Akt_Num == 169:       # ===============================================   169
-		
-			pass
-		elif Akt_Num == 170:       # ===============================================   170
-			
-			pass
-		elif Akt_Num == 171:       # ===============================================   171
-		
-			pass
-		elif Akt_Num == 172:       # ===============================================   172
-			
-			pass
-		elif Akt_Num == 173:       # ===============================================   173
-			
-			pass
-		elif Akt_Num == 174:       # ===============================================   174
-		
-			pass
-		elif Akt_Num == 175:       # ===============================================   175
-		
-			pass
-		elif Akt_Num == 176:       # ===============================================   176
-		
-			pass
-		elif Akt_Num == 177:       # ===============================================   177
-			
-			pass
-		elif Akt_Num == 178:       # ===============================================   178
-		
-			pass
-		elif Akt_Num == 179:       # ===============================================   179
-			
-			pass
-		elif Akt_Num == 180:       # ===============================================   180
-			
-			pass
-		elif Akt_Num == 181:       # ===============================================   181
-			
-			pass
-		elif Akt_Num == 182:       # ===============================================   182
-		
-			pass
-		elif Akt_Num == 183:       # ===============================================   183
-			
-			pass
-		elif Akt_Num == 18301:       # ===============================================   18301
-		
-			pass	
-		elif Akt_Num == 184:       # ===============================================   184
-		
-			pass
-		elif Akt_Num == 185:       # ===============================================   185
-			
-			pass
-		elif Akt_Num == 186:       # ===============================================   186
-		
-			pass
-		elif Akt_Num == 187:       # ===============================================   187
-		
-			pass
-		elif Akt_Num == 188:       # ===============================================   188
-		
-			pass
-		elif Akt_Num == 189:       # ===============================================   189
-			
-			pass
-		elif Akt_Num == 190:       # ===============================================   190
-		
-			pass
-		elif Akt_Num == 191:       # ===============================================   191
-			
-			pass
-		elif Akt_Num == 192:       # ===============================================   192
-			
-			pass
-		elif Akt_Num == 193:       # ===============================================   193
-		
-			pass
-		elif Akt_Num == 194:       # ===============================================   194
-			
-			pass
-		elif Akt_Num == 195:       # ===============================================   195
-			
-			pass
-		elif Akt_Num == 196:       # ===============================================   196
-		
-			pass
-		elif Akt_Num == 197:       # ===============================================   197
-			
-			pass
 		
 	#elif message.type == 'note_off' and message.channel == TARGET_INSTRUMENT:
 		#print(f"MIDI Note Off: {message.note}")
