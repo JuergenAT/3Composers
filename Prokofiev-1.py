@@ -362,15 +362,15 @@ def process_midi_message(message):
 			print("AktionsNr =",Akt_Num)
 			if message.note == 55:
 				Bef_Key[55]=False
-				Bef_Key[52]=True
+				Bef_Key[64]=True
 				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 217
 				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 217:       # ===============================================   217
 			print("AktionsNr =",Akt_Num)
-			if message.note == 52:
-				Bef_Key[52]=False
+			if message.note == 64:
+				Bef_Key[64]=False
 				Bef_Key[31]=True
 				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 218
@@ -380,15 +380,15 @@ def process_midi_message(message):
 			print("AktionsNr =",Akt_Num)
 			if message.note == 31:
 				Bef_Key[31]=False
-				Bef_Key[52]=True
+				Bef_Key[64]=True
 				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 219
 				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 219:       # ===============================================   219
 			print("AktionsNr =",Akt_Num)
-			if message.note == 52:
-				Bef_Key[52]=False
+			if message.note == 64:
+				Bef_Key[64]=False
 				Bef_Key[31]=True
 				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 220
@@ -716,15 +716,15 @@ def process_midi_message(message):
 			print("AktionsNr =",Akt_Num)
 			if message.note == 26:
 				Bef_Key[26]=False
-				Bef_Key[86]=True
+				Bef_Key[75]=True
 				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 253
 				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 253:       # ===============================================   253
 			print("AktionsNr =",Akt_Num)
-			if message.note == 86:
-				Bef_Key[86]=False
+			if message.note == 75:
+				Bef_Key[75]=False
 				Bef_Key[32]=True
 				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 254

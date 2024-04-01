@@ -599,7 +599,7 @@ def process_midi_message(message):
 				client.send_message(msg, mn) 
 				print("msg=",msg,"n=",mn)
 				print("AktNr =",Akt_Num, ' passed',end='')
-				Akt_Num = 34703
+				Akt_Num = 348
 				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 348:       # ===============================================   348
@@ -707,74 +707,74 @@ def process_midi_message(message):
 			print("AktionsNr =",Akt_Num)
 			if message.note == 86:
 				Bef_Key[86]=False
-				Bef_Key[89]=True
+				Bef_Key[77]=True
 				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 367
 				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 367:       # ===============================================   367
 			print("AktionsNr =",Akt_Num)
-			if message.note == 89:
-				Bef_Key[89]=False
-				Bef_Key[74]=True
-				print("AktNr =",Akt_Num, ' passed',end='')
-				Akt_Num = 368
-				print(", New AktNr =",Akt_Num)
-			pass
-		elif Akt_Num == 368:       # ===============================================   368
-			print("AktionsNr =",Akt_Num)
-			if message.note == 74:
-				Bef_Key[74]=False
-				Bef_Key[86]=True
-				print("AktNr =",Akt_Num, ' passed',end='')
-				Akt_Num = 369
-				print(", New AktNr =",Akt_Num)
-			pass
-		elif Akt_Num == 369:       # ===============================================   369
-			print("AktionsNr =",Akt_Num)
-			if message.note == 86:
-				Bef_Key[86]=False
-				Bef_Key[89]=True
-				print("AktNr =",Akt_Num, ' passed',end='')
-				Akt_Num = 370
-				print(", New AktNr =",Akt_Num)
-			pass
-		elif Akt_Num == 370:       # ===============================================   370
-			print("AktionsNr =",Akt_Num)
-			if message.note == 89:
-				Bef_Key[89]=False
-				Bef_Key[74]=True
-				print("AktNr =",Akt_Num, ' passed',end='')
-				Akt_Num = 371
-				print(", New AktNr =",Akt_Num)
-			pass
-		elif Akt_Num == 371:       # ===============================================   371
-			print("AktionsNr =",Akt_Num)
-			if message.note == 74:
-				Bef_Key[74]=False
-				Bef_Key[86]=True
-				print("AktNr =",Akt_Num, ' passed',end='')
-				Akt_Num = 372
-				print(", New AktNr =",Akt_Num)
-			pass
-		elif Akt_Num == 372:       # ===============================================   372
-			print("AktionsNr =",Akt_Num)
-			if message.note == 86:
-				Bef_Key[86]=False
-				Bef_Key[89]=True
-				print("AktNr =",Akt_Num, ' passed',end='')
-				Akt_Num = 373
-				print(", New AktNr =",Akt_Num)
-			pass
-		elif Akt_Num == 373:       # ===============================================   373
-			print("AktionsNr =",Akt_Num)
-			if message.note == 89:
-				Bef_Key[89]=False
+			if message.note == 77:
+				Bef_Key[77]=False
 				Bef_Key[74]=True
 				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 374
 				print(", New AktNr =",Akt_Num)
 			pass
+		#elif Akt_Num == 368:       # ===============================================   368
+		#	print("AktionsNr =",Akt_Num)
+		#	if message.note == 74:
+		#		Bef_Key[74]=False
+		#		Bef_Key[86]=True
+		#		print("AktNr =",Akt_Num, ' passed',end='')
+		#		Akt_Num = 369
+		#		print(", New AktNr =",Akt_Num)
+		#	pass
+		#elif Akt_Num == 369:       # ===============================================   369
+		#	print("AktionsNr =",Akt_Num)
+		#	if message.note == 86:
+		#		Bef_Key[86]=False
+		#		Bef_Key[89]=True
+		#		print("AktNr =",Akt_Num, ' passed',end='')
+		#		Akt_Num = 370
+		#		print(", New AktNr =",Akt_Num)
+		#	pass
+		#elif Akt_Num == 370:       # ===============================================   370
+		#	print("AktionsNr =",Akt_Num)
+		#	if message.note == 89:
+		#		Bef_Key[89]=False
+		#		Bef_Key[74]=True
+		#		print("AktNr =",Akt_Num, ' passed',end='')
+		#		Akt_Num = 371
+		#		print(", New AktNr =",Akt_Num)
+		#	pass
+		#elif Akt_Num == 371:       # ===============================================   371
+		#	print("AktionsNr =",Akt_Num)
+		#	if message.note == 74:
+		#		Bef_Key[74]=False
+		#		Bef_Key[86]=True
+		#		print("AktNr =",Akt_Num, ' passed',end='')
+		#		Akt_Num = 372
+		#		print(", New AktNr =",Akt_Num)
+		#	pass
+		#elif Akt_Num == 372:       # ===============================================   372
+		#	print("AktionsNr =",Akt_Num)
+		#	if message.note == 86:
+		#		Bef_Key[86]=False
+		#		Bef_Key[89]=True
+		#		print("AktNr =",Akt_Num, ' passed',end='')
+		#		Akt_Num = 373
+		#		print(", New AktNr =",Akt_Num)
+		#	pass
+		#elif Akt_Num == 373:       # ===============================================   373
+		#	print("AktionsNr =",Akt_Num)
+		#	if message.note == 89:
+		#		Bef_Key[89]=False
+		#		Bef_Key[74]=True
+		#		print("AktNr =",Akt_Num, ' passed',end='')
+		#		Akt_Num = 374
+		#		print(", New AktNr =",Akt_Num)
+		#	pass
 		elif Akt_Num == 374:       # ===============================================   374
 			print("AktionsNr =",Akt_Num)
 			if message.note == 74:
