@@ -871,7 +871,6 @@ while BReRun and (not BExit):
 			message = input_port.poll()
 			if message:
 				track.append(message)
-				track.append(message)
 				process_midi_message(message)
 				if message.type == 'note_on' or message.type == 'note_off':
 					#print("message=", message)

@@ -38,24 +38,36 @@ MIDI_filename = MIDI_filename.replace('.','')
 print("55555555555555")
 
 
+# функции обработки вторично активных миди-клавиш
+def f_Bef075():
+	global mn, Akt_Num, Bef_Key
+	Bef_Key[76]=False
+	Bef_Key[64]=True
+	Bef_Key[77]=True
+	mn = 34
+	msg = "/action/launchColumn"
+	#SENDING OSC MESSAGES
+	client.send_message(msg, mn) 
+	print("msg=",msg,"n=",mn)
+	print("AktNr =",Akt_Num, ' passed',end='')
+	Akt_Num = 77
+	print(", New AktNr =",Akt_Num)
+
+def f_Bef078():
+	global mn, Akt_Num, Bef_Key
+	Bef_Key[77]=False
+	Bef_Key[57]=True
+	print("AktNr =",Akt_Num, ' passed',end='')
+	Akt_Num = 79
+	print(", New AktNr =",Akt_Num)
+
+
 # Функция для обработки MIDI-сообщений
 def process_midi_message(message):
 	global mn, Akt_Num, Bef_Key, BExit
 	if message.type == 'note_on':
 		print(f"MIDI Note On: {message.note}")
-		if Akt_Num == 61:          # ===============================================   061
-			print("AktionsNr =",Akt_Num)
-			Bef_Key[45] = True
-			mn = 23
-			msg = "/action/launchColumn"
-			#SENDING OSC MESSAGES
-			client.send_message(msg, mn) 
-			print("msg=",msg,"n=",mn)
-			print("AktNr =",Akt_Num, ' passed',end='')
-			Akt_Num = 62
-			print(", New AktNr =",Akt_Num)
-			pass
-		elif Akt_Num == 62:        # ===============================================   062
+		if Akt_Num == 62:        # ===============================================   062
 			print("AktionsNr =",Akt_Num)
 			if message.note == 45:
 				Bef_Key[45]=False
@@ -77,6 +89,8 @@ def process_midi_message(message):
 				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 64
 				print(", New AktNr =",Akt_Num)
+			elif message.note == 76:
+				f_Bef075()
 			pass
 		elif Akt_Num == 64:        # ===============================================   064
 			print("AktionsNr =",Akt_Num)
@@ -86,6 +100,8 @@ def process_midi_message(message):
 				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 65
 				print(", New AktNr =",Akt_Num)
+			elif message.note == 76:
+				f_Bef075()
 			pass
 		elif Akt_Num == 65:        # ===============================================   065
 			print("AktionsNr =",Akt_Num)
@@ -95,6 +111,8 @@ def process_midi_message(message):
 				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 66
 				print(", New AktNr =",Akt_Num)
+			elif message.note == 76:
+				f_Bef075()
 			pass
 		elif Akt_Num == 66:        # ===============================================   066
 			print("AktionsNr =",Akt_Num)
@@ -109,6 +127,8 @@ def process_midi_message(message):
 				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 67
 				print(", New AktNr =",Akt_Num)
+			elif message.note == 76:
+				f_Bef075()
 			pass
 		elif Akt_Num == 67:        # ===============================================   067
 			print("AktionsNr =",Akt_Num)
@@ -123,6 +143,8 @@ def process_midi_message(message):
 				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 68
 				print(", New AktNr =",Akt_Num)
+			elif message.note == 76:
+				f_Bef075()
 			pass
 		elif Akt_Num == 68:        # ===============================================   068
 			print("AktionsNr =",Akt_Num)
@@ -137,6 +159,8 @@ def process_midi_message(message):
 				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 69
 				print(", New AktNr =",Akt_Num)
+			elif message.note == 76:
+				f_Bef075()
 			pass
 		elif Akt_Num == 69:        # ===============================================   069
 			print("AktionsNr =",Akt_Num)
@@ -151,6 +175,8 @@ def process_midi_message(message):
 				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 70
 				print(", New AktNr =",Akt_Num)
+			elif message.note == 76:
+				f_Bef075()
 			pass
 		elif Akt_Num == 70:       # ===============================================   070
 			print("AktionsNr =",Akt_Num)
@@ -165,6 +191,8 @@ def process_midi_message(message):
 				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 71
 				print(", New AktNr =",Akt_Num)
+			elif message.note == 76:
+				f_Bef075()
 			pass
 		elif Akt_Num == 71:       # ===============================================   071
 			print("AktionsNr =",Akt_Num)
@@ -179,6 +207,8 @@ def process_midi_message(message):
 				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 72
 				print(", New AktNr =",Akt_Num)
+			elif message.note == 76:
+				f_Bef075()
 			pass
 		elif Akt_Num == 72:       # ===============================================   072
 			print("AktionsNr =",Akt_Num)
@@ -193,6 +223,8 @@ def process_midi_message(message):
 				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 73
 				print(", New AktNr =",Akt_Num)
+			elif message.note == 76:
+				f_Bef075()
 			pass
 		elif Akt_Num == 73:       # ===============================================   073
 			print("AktionsNr =",Akt_Num)
@@ -207,6 +239,8 @@ def process_midi_message(message):
 				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 74
 				print(", New AktNr =",Akt_Num)
+			elif message.note == 76:
+				f_Bef075()
 			pass
 		elif Akt_Num == 74:       # ===============================================   074
 			print("AktionsNr =",Akt_Num)
@@ -221,30 +255,23 @@ def process_midi_message(message):
 				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 75
 				print(", New AktNr =",Akt_Num)
+			elif message.note == 76:
+				f_Bef075()
 			pass
 		elif Akt_Num == 75:       # ===============================================   075
 			print("AktionsNr =",Akt_Num)
 			if message.note == 76:
-				Bef_Key[76]=False
-				Bef_Key[57]=True
-				mn = 34
-				msg = "/action/launchColumn"
-				#SENDING OSC MESSAGES
-				client.send_message(msg, mn) 
-				print("msg=",msg,"n=",mn)
-				print("AktNr =",Akt_Num, ' passed',end='')
-				Akt_Num = 76
-				print(", New AktNr =",Akt_Num)
+				f_Bef075()
 			pass
-		elif Akt_Num == 76:       # ===============================================   076
-			print("AktionsNr =",Akt_Num)
-			if message.note == 57:
-				Bef_Key[57]=False
-				Bef_Key[64]=True
-				print("AktNr =",Akt_Num, ' passed',end='')
-				Akt_Num = 77
-				print(", New AktNr =",Akt_Num)
-			pass
+		#elif Akt_Num == 76:       # ===============================================   076
+			#print("AktionsNr =",Akt_Num)
+			#if message.note == 57:
+			#	Bef_Key[57]=False
+			#	Bef_Key[64]=True
+			#	print("AktNr =",Akt_Num, ' passed',end='')
+			#	Akt_Num = 77
+			#	print(", New AktNr =",Akt_Num)
+			#pass
 		elif Akt_Num == 77:       # ===============================================   077
 			print("AktionsNr =",Akt_Num)
 			if message.note == 64:
@@ -258,15 +285,13 @@ def process_midi_message(message):
 				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 78
 				print(", New AktNr =",Akt_Num)
+			elif message.note == 77:
+				f_Bef078()
 			pass
 		elif Akt_Num == 78:       # ===============================================   078
 			print("AktionsNr =",Akt_Num)
 			if message.note == 77:
-				Bef_Key[77]=False
-				Bef_Key[57]=True
-				print("AktNr =",Akt_Num, ' passed',end='')
-				Akt_Num = 79
-				print(", New AktNr =",Akt_Num)
+				f_Bef078()
 			pass
 		elif Akt_Num == 79:       # ===============================================   079
 			print("AktionsNr =",Akt_Num)
@@ -299,83 +324,83 @@ def process_midi_message(message):
 			print("AktionsNr =",Akt_Num)
 			if message.note == 77:
 				Bef_Key[77]=False
-				Bef_Key[52]=True
+				Bef_Key[33]=True
 				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 83
 				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 83:       # ===============================================   083
 			print("AktionsNr =",Akt_Num)
-			if message.note == 52:
-				Bef_Key[52]=False
-				Bef_Key[86]=True
+			if message.note == 33:
+				Bef_Key[33]=False
+				Bef_Key[52]=True
 				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 84
 				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 84:       # ===============================================   084
 			print("AktionsNr =",Akt_Num)
-			if message.note == 86:
-				Bef_Key[86]=False
-				Bef_Key[83]=True
+			if message.note == 52:
+				Bef_Key[52]=False
+				Bef_Key[69]=True
 				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 85
 				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 85:       # ===============================================   085
 			print("AktionsNr =",Akt_Num)
-			if message.note == 83:
-				Bef_Key[83]=False
-				Bef_Key[79]=True
+			if message.note == 69:
+				Bef_Key[69]=False
+				Bef_Key[35]=True
 				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 86
 				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 86:       # ===============================================   086
 			print("AktionsNr =",Akt_Num)
-			if message.note == 79:
-				Bef_Key[79]=False
-				Bef_Key[67]=True
+			if message.note == 35:
+				Bef_Key[35]=False
+				Bef_Key[86]=True
 				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 87
 				print(", New AktNr =",Akt_Num)
 			pass
 		elif Akt_Num == 87:       # ===============================================   087
 			print("AktionsNr =",Akt_Num)
-			if message.note == 67:
-				Bef_Key[67]=False
-				Bef_Key[79]=True
-				print("AktNr =",Akt_Num, ' passed',end='')
-				Akt_Num = 88
-				print(", New AktNr =",Akt_Num)
-			pass
-		elif Akt_Num == 88:       # ===============================================   088
-			print("AktionsNr =",Akt_Num)
-			if message.note == 79:
-				Bef_Key[79]=False
-				Bef_Key[67]=True
-				print("AktNr =",Akt_Num, ' passed',end='')
-				Akt_Num = 89
-				print(", New AktNr =",Akt_Num)
-			pass
-		elif Akt_Num == 89:       # ===============================================   089
-			print("AktionsNr =",Akt_Num)
-			if message.note == 67:
-				Bef_Key[67]=False
-				Bef_Key[79]=True
-				print("AktNr =",Akt_Num, ' passed',end='')
-				Akt_Num = 90
-				print(", New AktNr =",Akt_Num)
-			pass
-		elif Akt_Num == 90:       # ===============================================   090
-			print("AktionsNr =",Akt_Num)
-			if message.note == 79:
-				Bef_Key[79]=False
+			if message.note == 86:
+				Bef_Key[86]=False
 				Bef_Key[38]=True
 				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 91
 				print(", New AktNr =",Akt_Num)
 			pass
+		#elif Akt_Num == 88:       # ===============================================   088
+		#	print("AktionsNr =",Akt_Num)
+		#	if message.note == 79:
+		#		Bef_Key[79]=False
+		#		Bef_Key[67]=True
+		#		print("AktNr =",Akt_Num, ' passed',end='')
+		#		Akt_Num = 89
+		#		print(", New AktNr =",Akt_Num)
+		#	pass
+		#elif Akt_Num == 89:       # ===============================================   089
+		#	print("AktionsNr =",Akt_Num)
+		#	if message.note == 67:
+		#		Bef_Key[67]=False
+		#		Bef_Key[79]=True
+		#		print("AktNr =",Akt_Num, ' passed',end='')
+		#		Akt_Num = 90
+		#		print(", New AktNr =",Akt_Num)
+		#	pass
+		#elif Akt_Num == 90:       # ===============================================   090
+		#	print("AktionsNr =",Akt_Num)
+		#	if message.note == 79:
+		#		Bef_Key[79]=False
+		#		Bef_Key[38]=True
+		#		print("AktNr =",Akt_Num, ' passed',end='')
+		#		Akt_Num = 91
+		#		print(", New AktNr =",Akt_Num)
+		#	pass
 		elif Akt_Num == 91:       # ===============================================   091
 			print("AktionsNr =",Akt_Num)
 			if message.note == 38:
@@ -477,7 +502,7 @@ def process_midi_message(message):
 			print("AktionsNr =",Akt_Num)
 			if message.note == 33:
 				Bef_Key[33]=False
-				Bef_Key[83]=True
+				Bef_Key[82]=True
 				mn = 41
 				msg = "/action/launchColumn"
 				#SENDING OSC MESSAGES
@@ -489,8 +514,8 @@ def process_midi_message(message):
 			pass
 		elif Akt_Num == 100:       # ===============================================   100
 			print("AktionsNr =",Akt_Num)
-			if message.note == 83:
-				Bef_Key[83]=False
+			if message.note == 82:
+				Bef_Key[82]=False
 				Bef_Key[31]=True
 				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 101
