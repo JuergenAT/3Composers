@@ -3,7 +3,7 @@ import mido
 from mido import MidiFile, MidiTrack
 from pynput import keyboard
 from pythonosc.udp_client import SimpleUDPClient
-import datetime  #for use in MIDI file name generation
+#import datetime  #for use in MIDI file name generation
 
 
 
@@ -31,8 +31,8 @@ print("44444444444444")
 client = SimpleUDPClient(ip, port)  # Create client
 
 #generate MIDI-file name to write
-MIDI_filename = 'MIDI-B2-' + str(datetime.datetime.now().date()) + '-' + str(datetime.datetime.now().time()).replace(':', '')
-MIDI_filename = MIDI_filename.replace('.','')
+#MIDI_filename = 'MIDI-B2-' + str(datetime.datetime.now().date()) + '-' + str(datetime.datetime.now().time()).replace(':', '')
+#MIDI_filename = MIDI_filename.replace('.','')
 
 
 print("55555555555555")
@@ -534,56 +534,55 @@ def process_midi_message(message):
 			print("AktionsNr =",Akt_Num)
 			if message.note == 81:
 				Bef_Key[81]=False
-				Bef_Key[40]=True
-				print("AktNr =",Akt_Num, ' passed',end='')
-				Akt_Num = 103
-				print(", New AktNr =",Akt_Num)
-			pass
-		elif Akt_Num == 103:       # ===============================================   103
-			print("AktionsNr =",Akt_Num)
-			if message.note == 40:
-				Bef_Key[40]=False
-				Bef_Key[38]=True
-				print("AktNr =",Akt_Num, ' passed',end='')
-				Akt_Num = 104
-				print(", New AktNr =",Akt_Num)
-			pass
-		elif Akt_Num == 104:       # ===============================================   104
-			print("AktionsNr =",Akt_Num)
-			if message.note == 38:
-				Bef_Key[38]=False
-				Bef_Key[34]=True
-				print("AktNr =",Akt_Num, ' passed',end='')
-				Akt_Num = 105
-				print(", New AktNr =",Akt_Num)
-			pass
-		elif Akt_Num == 105:       # ===============================================   105
-			print("AktionsNr =",Akt_Num)
-			if message.note == 34:
-				Bef_Key[34]=False
 				Bef_Key[33]=True
 				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 106
 				print(", New AktNr =",Akt_Num)
 			pass
+		#elif Akt_Num == 103:       # ===============================================   103
+		#	print("AktionsNr =",Akt_Num)
+		#	if message.note == 40:
+		#		Bef_Key[40]=False
+		#		Bef_Key[38]=True
+		#		print("AktNr =",Akt_Num, ' passed',end='')
+		#		Akt_Num = 104
+		#		print(", New AktNr =",Akt_Num)
+		#	pass
+		#elif Akt_Num == 104:       # ===============================================   104
+		#	print("AktionsNr =",Akt_Num)
+		#		Bef_Key[38]=False
+		#		Bef_Key[34]=True
+		#		print("AktNr =",Akt_Num, ' passed',end='')
+		#		Akt_Num = 105
+		#		print(", New AktNr =",Akt_Num)
+		#	pass
+		#elif Akt_Num == 105:       # ===============================================   105
+		#	print("AktionsNr =",Akt_Num)
+		#	if message.note == 34:
+		#		Bef_Key[34]=False
+		#		Bef_Key[33]=True
+		#		print("AktNr =",Akt_Num, ' passed',end='')
+		#		Akt_Num = 106
+		#		print(", New AktNr =",Akt_Num)
+		#	pass
 		elif Akt_Num == 106:       # ===============================================   106
 			print("AktionsNr =",Akt_Num)
 			if message.note == 33:
 				Bef_Key[33]=False
-				Bef_Key[34]=True
-				print("AktNr =",Akt_Num, ' passed',end='')
-				Akt_Num = 107
-				print(", New AktNr =",Akt_Num)
-			pass
-		elif Akt_Num == 107:       # ===============================================   107
-			print("AktionsNr =",Akt_Num)
-			if message.note == 34:
-				Bef_Key[34]=False
 				Bef_Key[81]=True
 				print("AktNr =",Akt_Num, ' passed',end='')
 				Akt_Num = 108
 				print(", New AktNr =",Akt_Num)
 			pass
+		#elif Akt_Num == 107:       # ===============================================   107
+		#	print("AktionsNr =",Akt_Num)
+		#	if message.note == 34:
+		#		Bef_Key[34]=False
+		#		Bef_Key[81]=True
+		#		print("AktNr =",Akt_Num, ' passed',end='')
+		#		Akt_Num = 108
+		#		print(", New AktNr =",Akt_Num)
+		#	pass
 		elif Akt_Num == 108:       # ===============================================   108
 			print("AktionsNr =",Akt_Num)
 			if message.note == 81:
@@ -782,9 +781,9 @@ print("6666666666666666")
 
 
 #open MIDI-file to write msg
-mid = MidiFile()
-track = MidiTrack()
-mid.tracks.append(track)
+#mid = MidiFile()
+#track = MidiTrack()
+#mid.tracks.append(track)
 
 
 
@@ -844,10 +843,10 @@ while BReRun and (not BExit):
 			message = input_port.poll()
 			if message:
 				process_midi_message(message)
-				if message.type == 'note_on' or message.type == 'note_off':
+				#if message.type == 'note_on' or message.type == 'note_off':
 					#print("message=", message)
-					track.append(mido.Message('note_on', note = message.note, velocity=64, time=32))
-					track.append(mido.Message('note_off', note = message.note, velocity=64, time=64))
+					#track.append(mido.Message('note_on', note = message.note, velocity=64, time=32))
+					#track.append(mido.Message('note_off', note = message.note, velocity=64, time=64))
 			#else:
 				#print("mn=",mn)
 				
@@ -884,8 +883,8 @@ if len(port_List) > 0:
 print("E-333333333333333333")
 print ("\nMIDI-port closed")
 #save MIDI-file
-mid.save(MIDI_filename+'.mid')
-print("MIDI-file is saved")
-print("E-444444444444444444")
+#mid.save(MIDI_filename+'.mid')
+#print("MIDI-file is saved")
+#print("E-444444444444444444")
 
 

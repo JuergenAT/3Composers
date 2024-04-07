@@ -3,7 +3,7 @@ import mido
 from mido import MidiFile, MidiTrack
 from pynput import keyboard
 from pythonosc.udp_client import SimpleUDPClient
-import datetime  #for use in MIDI file name generation
+#import datetime  #for use in MIDI file name generation
 
 
 
@@ -31,8 +31,8 @@ print("44444444444444")
 client = SimpleUDPClient(ip, port)  # Create client
 
 #generate MIDI-file name to write
-MIDI_filename = 'MIDI-P3-' + str(datetime.datetime.now().date()) + '-' + str(datetime.datetime.now().time()).replace(':', '')
-MIDI_filename = MIDI_filename.replace('.','')
+#MIDI_filename = 'MIDI-P3-' + str(datetime.datetime.now().date()) + '-' + str(datetime.datetime.now().time()).replace(':', '')
+#MIDI_filename = MIDI_filename.replace('.','')
 
 
 print("55555555555555")
@@ -958,9 +958,9 @@ print("6666666666666666")
 
 
 #open MIDI-file to write msg
-mid = MidiFile()
-track = MidiTrack()
-mid.tracks.append(track)
+#mid = MidiFile()
+#track = MidiTrack()
+#mid.tracks.append(track)
 
 
 
@@ -1019,13 +1019,13 @@ while BReRun and (not BExit):
 		while True:
 			message = input_port.poll()
 			if message:
-				track.append(message)
+				#track.append(message)
 				process_midi_message(message)
-				if message.type == 'note_on' or message.type == 'note_off':
+				#if message.type == 'note_on' or message.type == 'note_off':
 					#print("message=", message)
 					#track.append(mido.Message('note_on', note = message.note, velocity=64, time=64))
 					#track.append(mido.Message('note_off', note = message.note, velocity=64, time=128))
-					pass
+				#	pass
 			#else:
 				#print("mn=",mn)
 				
@@ -1062,8 +1062,8 @@ if len(port_List) > 0:
 print("E-333333333333333333")
 print ("\nMIDI-port closed")
 #save MIDI-file
-mid.save(MIDI_filename+'.mid')
-print("MIDI-file is saved")
-print("E-444444444444444444")
+#mid.save(MIDI_filename+'.mid')
+#print("MIDI-file is saved")
+#print("E-444444444444444444")
 
 
